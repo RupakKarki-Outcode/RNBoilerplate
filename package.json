@@ -30,7 +30,11 @@
     "expo:ios": "expo start --ios",
     "expo:web": "expo start --web",
     "expo:build:detox": "detox build -c ios.sim.expo",
-    "expo:test:detox": "./bin/downloadExpoApp.sh && detox test --configuration ios.sim.expo"
+    "expo:test:detox": "./bin/downloadExpoApp.sh && detox test --configuration ios.sim.expo",
+    "generate:component": "npx ignite-cli generate component",
+    "generate:screen": "npx ignite-cli generate screen",
+    "generate:icon": "npx ignite-cli generate app-icon",
+    "generate:splash": "npx ignite-cli generate splash-screen"
   },
   "overrides": {
     "react-error-overlay": "6.0.9"
