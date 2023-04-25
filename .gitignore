@@ -84,3 +84,6 @@ web-build/
 
 # Configurations
 !env.js
+
+google-services.json
+ios/GoogleService-Info.plist
