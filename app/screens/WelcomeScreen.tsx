@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query"
 import React, { FC } from "react"
 import { Image, ImageStyle, TextStyle, View, ViewStyle } from "react-native"
-import { Text } from "../components"
+import { Icon, Text } from "../components"
 import { isRTL } from "../i18n"
 import ExampleService from "../services/api/example.api"
-import { colors, spacing } from "../theme"
+import { $globalViewStyles, colors, spacing } from "../theme"
 import { useSafeAreaInsetsStyle } from "../utils/useSafeAreaInsetsStyle"
 
 const welcomeLogo = require("../../assets/images/logo.png")
@@ -34,6 +34,11 @@ export const WelcomeScreen: FC = function WelcomeScreen() {
       </View>
 
       <View style={[$bottomContainer, $bottomContainerInsets]}>
+        <View style={[$globalViewStyles.row, $globalViewStyles.justifyContentBetween]}>
+          <Icon icon="back" />
+          <Text text="Hello" />
+          <Icon icon="bell" />
+        </View>
         <Text tx="welcomeScreen.postscript" size="md" />
       </View>
     </View>

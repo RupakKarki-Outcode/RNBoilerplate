@@ -13,7 +13,7 @@ PODS:
     - ExpoModulesCore
   - EXFont (11.0.1):
     - ExpoModulesCore
-  - Expo (47.0.13):
+  - Expo (47.0.14):
     - ExpoModulesCore
   - ExpoKeepAwake (11.0.1):
     - ExpoModulesCore
@@ -351,14 +351,14 @@ PODS:
     - React-perflogger (= 0.70.5)
   - RNBootSplash (4.3.2):
     - React-Core
-  - RNCAsyncStorage (1.17.11):
+  - RNCAsyncStorage (1.17.12):
     - React-Core
-  - RNFBApp (17.4.2):
+  - RNFBApp (17.5.0):
     - Firebase/CoreOnly (= 10.7.0)
     - React-Core
-  - RNGestureHandler (2.8.0):
+  - RNGestureHandler (2.12.0):
     - React-Core
-  - RNReanimated (2.12.0):
+  - RNReanimated (2.17.0):
     - DoubleConversion
     - FBLazyVector
     - FBReactNativeSpec
@@ -571,7 +571,7 @@ SPEC CHECKSUMS:
   EXErrorRecovery: ae43433feb0608a64dc5b1c8363b3e7769a9ea24
   EXFileSystem: 60602b6eefa6873f97172c684b7537c9760b50d6
   EXFont: 319606bfe48c33b5b5063fb0994afdc496befe80
-  Expo: b9fa98bf260992312ee3c424400819fb9beadafe
+  Expo: 5f4240506a147162542178989696e56e3dd72924
   ExpoKeepAwake: 69b59d0a8d2b24de9f82759c39b3821fec030318
   ExpoLocalization: e202d1e2a4950df17ac8d0889d65a1ffd7532d7e
   ExpoModulesCore: 485dff3a59b036a33b6050c0a5aea3cf1037fdd1
@@ -616,13 +616,13 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: 7401c4a40f8728fd89df4a56104541b760876117
   ReactCommon: c9246996e73bf75a2c6c3ff15f1e16707cdc2da9
   RNBootSplash: 5f346163977573d6b2aeba1b25df9d2245c0d73c
-  RNCAsyncStorage: 8616bd5a58af409453ea4e1b246521bb76578d60
-  RNFBApp: 0f6bd7ee155a50f5e68cd68aab2709a4d24bfdff
-  RNGestureHandler: 62232ba8f562f7dea5ba1b3383494eb5bf97a4d3
-  RNReanimated: 2a91e85fcd343f8af3c58d3425b99fdd285590a5
+  RNCAsyncStorage: 09fc8595e6d6f6d5abf16b23a56b257d9c6b7c5b
+  RNFBApp: 0d8bf86673bbad0524d1ceac3944d71ccf48a0e4
+  RNGestureHandler: dec4645026e7401a0899f2846d864403478ff6a5
+  RNReanimated: bec7736122a268883bdede07f1bf9cf4b40158db
   RNScreens: 34cc502acf1b916c582c60003dc3089fa01dc66d
   Yoga: eca980a5771bf114c41a754098cd85e6e0d90ed7
 
 PODFILE CHECKSUM: 5ce952a7bcac20ff86f4f3a63e47c15f8026a2dc
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.1

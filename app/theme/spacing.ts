@@ -1,3 +1,5 @@
+import { Dimensions } from "react-native"
+
 /**
   Use these spacings for margins/paddings and other whitespace throughout your app.
  */
@@ -12,5 +14,10 @@ export const spacing = {
   huge: 48,
   massive: 64,
 } as const
+
+export const Device = {
+  width: Dimensions.get("window").width,
+  height: Dimensions.get("window").height,
+}
 
 export type Spacing = keyof typeof spacing
