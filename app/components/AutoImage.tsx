@@ -1,8 +1,11 @@
 import React, { useLayoutEffect, useState } from "react"
-import { Image, ImageProps, ImageURISource, Platform } from "react-native"
+import { ActivityIndicator, Image, ImageURISource, Platform, View } from "react-native"
+import FastImage, { FastImageProps } from "react-native-fast-image"
+import { $activityIndicator } from "../theme"
 
 // TODO: document new props
-export interface AutoImageProps extends ImageProps {
+export interface AutoImageProps extends FastImageProps {
+  showLoader?: boolean
   /**
    * How wide should the image be?
    */
@@ -57,8 +60,10 @@ export function useAutoImage(
  * - [Documentation and Examples](https://github.com/infinitered/ignite/blob/master/docs/Components-AutoImage.md)
  */
 export function AutoImage(props: AutoImageProps) {
-  const { maxWidth, maxHeight, ...ImageProps } = props
+  const { maxWidth, maxHeight, showLoader, ...FastImageProps } = props
   const source = props.source as ImageURISource
+
+  const [loading, setLoading] = useState(false)
 
   const [width, height] = useAutoImage(
     Platform.select({
@@ -68,5 +73,21 @@ export function AutoImage(props: AutoImageProps) {
     [maxWidth, maxHeight],
   )
 
-  return <Image {...ImageProps} style={[{ width, height }, props.style]} />
+  return (
+    <>
+      {loading && showLoader && (
+        <View style={[$activityIndicator, { height, width }]}>
+          <ActivityIndicator />
+        </View>
+      )}
+      <FastImage
+        {...FastImageProps}
+        style={[{ width, height }, props.style]}
+        onLoadStart={() => setLoading(true)}
+        onLoad={() => setLoading(false)}
+        onLoadEnd={() => setLoading(false)}
+        resizeMode="contain"
+      />
+    </>
+  )
 }
