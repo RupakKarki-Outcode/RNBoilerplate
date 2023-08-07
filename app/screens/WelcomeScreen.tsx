@@ -1,12 +1,13 @@
 import { useQuery } from "@tanstack/react-query"
 import React, { FC } from "react"
 import { Image, ImageStyle, TextStyle, View, ViewStyle } from "react-native"
-import { Icon, Text } from "../components"
+import { Button, Icon, Screen, Text } from "../components"
 import { isRTL } from "../i18n"
 import ExampleService from "../services/api/example.api"
 import { $globalViewStyles, colors, spacing } from "../theme"
 import { useSafeAreaInsetsStyle } from "../utils/useSafeAreaInsetsStyle"
-
+import { SearchBar } from "@rneui/themed"
+import RNDateTimePicker from "@react-native-community/datetimepicker"
 const welcomeLogo = require("../../assets/images/logo.png")
 const welcomeFace = require("../../assets/images/welcome-face.png")
 
@@ -20,7 +21,7 @@ export const WelcomeScreen: FC = function WelcomeScreen() {
   })
 
   return (
-    <View style={$container}>
+    <Screen style={$container} preset="scroll" contentContainerStyle={$globalViewStyles.fill}>
       <View style={$topContainer}>
         <Image style={$welcomeLogo} source={welcomeLogo} resizeMode="contain" />
         <Text
@@ -39,9 +40,12 @@ export const WelcomeScreen: FC = function WelcomeScreen() {
           <Text text="Hello" />
           <Icon icon="bell" />
         </View>
+        <SearchBar platform="ios" />
+        <Button text="Click me" preset="reversed" />
         <Text tx="welcomeScreen.postscript" size="md" />
+        <RNDateTimePicker value={new Date()} />
       </View>
-    </View>
+    </Screen>
   )
 }
 
