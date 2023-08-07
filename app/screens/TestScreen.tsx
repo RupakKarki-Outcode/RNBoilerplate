@@ -1,32 +1,24 @@
----
-patch:
-  path: "app/screens/index.ts"
-  append: "export * from \"./<%= props.pascalCaseName %>Screen\"\n"
-  skip: <%= props.skipIndexFile %>
----
 import React, { FC } from "react"
 import { ViewStyle } from "react-native"
 import { AppStackScreenProps } from "../navigators"
 import { Screen, Text } from "../components"
 // import { useNavigation } from "@react-navigation/native"
 
-
 // STOP! READ ME FIRST!
 // To fix the TS error below, you'll need to add the following things in your navigation config:
-// - Add `<%= props.pascalCaseName %>: undefined` to AppStackParamList
+// - Add `Test: undefined` to AppStackParamList
 // - Import your screen, and add it to the stack:
-//     `<Stack.Screen name="<%= props.pascalCaseName %>" component={<%= props.pascalCaseName%>Screen} />`
+//     `<Stack.Screen name="Test" component={TestScreen} />`
 // Hint: Look for the 🔥!
 
-interface <%= props.pascalCaseName %>ScreenProps extends AppStackScreenProps<"<%= props.pascalCaseName %>">{}
+interface TestScreenProps extends AppStackScreenProps<"Test"> {}
 
-export const <%= props.pascalCaseName %>Screen: FC<<%= props.pascalCaseName %>ScreenProps> = () => {
-
+export const TestScreen: FC<TestScreenProps> = () => {
   // Pull in navigation via hook
   // const navigation = useNavigation()
   return (
     <Screen style={$root} preset="scroll">
-      <Text text="<%= props.camelCaseName %>" />
+      <Text text="test" />
     </Screen>
   )
 }
