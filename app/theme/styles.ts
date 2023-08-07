@@ -1,4 +1,14 @@
 import {  TextStyle, ViewStyle, StyleSheet } from "react-native"
+import { spacing } from "./spacing";
+import { colors } from "./colors";
+
+export const $activityIndicator: ViewStyle = { flex: 1, justifyContent: "center" }
+
+export const $screenContentContainer: ViewStyle = {
+  paddingHorizontal: spacing.medium,
+  paddingVertical: spacing.huge,
+  backgroundColor: colors.palette.neutral100,
+}
 
 export const $globalViewStyles = {
   /* Column Layouts */
@@ -127,7 +137,7 @@ export const $globalViewStyles = {
 } satisfies Record<string, ViewStyle>;
 
 export const $globalTextStyles =  {
-      // Text alignment styles
+  // Text alignment styles
   center: {
     textAlign: "center",
   },
