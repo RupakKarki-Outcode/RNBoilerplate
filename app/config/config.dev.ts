@@ -5,6 +5,10 @@
  *
  * https://reactnative.dev/docs/security#storing-sensitive-info
  */
+
+// @ts-ignore
+import { API_URL } from "@env"
+
 export default {
-  API_URL: "https://jsonplaceholder.typicode.com",
+  API_URL,
 }
