@@ -1,7 +1,19 @@
+/**
+ * These are configuration settings for the dev environment.
+ *
+ * Do not include API secrets in this file or anywhere in your JS.
+ *
+ * https://reactnative.dev/docs/security#storing-sensitive-info
+ */
+
+// @ts-ignore
+import { ENV } from "@env"
+
 export interface ConfigBaseProps {
   persistNavigation: "always" | "dev" | "prod" | "never"
   catchErrors: "always" | "dev" | "prod" | "never"
   exitRoutes: string[]
+  env: string
 }
 
 export type PersistNavigationConfig = ConfigBaseProps["persistNavigation"]
@@ -21,6 +33,8 @@ const BaseConfig: ConfigBaseProps = {
    * is pressed while in that screen. Only affects Android.
    */
   exitRoutes: ["Welcome"],
+
+  env: ENV,
 }
 
 export default BaseConfig

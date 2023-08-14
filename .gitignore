@@ -85,5 +85,7 @@ web-build/
 # Configurations
 !env.js
 
-google-services.json
-ios/GoogleService-Info.plist
+
+.env.staging
+.env.development
+.env.production
