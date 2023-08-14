@@ -28,6 +28,7 @@ import { navigationRef, useBackButtonHandler } from "./navigationUtilities"
  */
 export type AppStackParamList = {
   Welcome: undefined
+  Test: undefined
   // 🔥 Your screens go here
 }
 
