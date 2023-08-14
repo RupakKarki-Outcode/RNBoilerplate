@@ -115,9 +115,16 @@ The `ignite` directory stores all things Ignite, including CLI and boilerplate i
 
 This directory will hold your Jest configs and mocks.
 
-
 ### Firebase
-Remember to add your own firebase config files
+
+This project has different product flavors and schemes. So, remember to add your own firebase config files.
+If you're not using Firebase, simply uninstall the packages, and remove any firebase related configs.
+
+#### Android
+
+- Create three different Firebase projects (preferrably) in your console.
+- Inside `android/src` you should see `main, staging, and debug`.
+- Put each `google-services.json` into their respective folders. Make sure to match the bundle identifiers.
 
 ## Running Detox end-to-end tests
 

@@ -1,4 +1,3 @@
-import { useQuery } from "@tanstack/react-query"
 import React, { FC } from "react"
 import { Image, ImageStyle, TextStyle, View, ViewStyle } from "react-native"
 import { Button, Icon, Screen, Text } from "../components"
@@ -8,6 +7,9 @@ import { $globalViewStyles, colors, spacing } from "../theme"
 import { useSafeAreaInsetsStyle } from "../utils/useSafeAreaInsetsStyle"
 import { SearchBar } from "@rneui/themed"
 import RNDateTimePicker from "@react-native-community/datetimepicker"
+import Config from "../config"
+import { useQuery } from "@tanstack/react-query"
+
 const welcomeLogo = require("../../assets/images/logo.png")
 const welcomeFace = require("../../assets/images/welcome-face.png")
 
@@ -31,6 +33,7 @@ export const WelcomeScreen: FC = function WelcomeScreen() {
           preset="heading"
         />
         <Text tx="welcomeScreen.exciting" preset="subheading" />
+        <Text text={Config.env} preset="subheading" />
         <Image style={$welcomeFace} source={welcomeFace} resizeMode="contain" />
       </View>
 

@@ -10,7 +10,7 @@ install! 'cocoapods', :deterministic_uuids => false
 
 production = ENV["PRODUCTION"] == "1"
 
-target 'RNBoilerplate' do
+abstract_target 'RNBoilerplateCommonPods' do
   use_expo_modules!
   post_integrate do |installer|
     begin
@@ -41,6 +41,15 @@ target 'RNBoilerplate' do
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
+
+  target 'RNBoilerplate' do
+  end
+ 
+  target 'RNBoilerplateStage' do
+  end
+ 
+  target 'RNBoilerplateDev' do
+  end
 
   target 'RNBoilerplateTests' do
     inherit! :complete
