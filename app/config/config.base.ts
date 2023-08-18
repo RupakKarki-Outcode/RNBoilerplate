@@ -1,13 +1,4 @@
-/**
- * These are configuration settings for the dev environment.
- *
- * Do not include API secrets in this file or anywhere in your JS.
- *
- * https://reactnative.dev/docs/security#storing-sensitive-info
- */
-
-// @ts-ignore
-import { ENV } from "@env"
+import Config from "react-native-config"
 
 export interface ConfigBaseProps {
   persistNavigation: "always" | "dev" | "prod" | "never"
@@ -34,7 +25,7 @@ const BaseConfig: ConfigBaseProps = {
    */
   exitRoutes: ["Welcome"],
 
-  env: ENV,
+  env: Config.ENV,
 }
 
 export default BaseConfig
