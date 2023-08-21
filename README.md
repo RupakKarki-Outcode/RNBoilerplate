@@ -115,10 +115,22 @@ The `ignite` directory stores all things Ignite, including CLI and boilerplate i
 
 This directory will hold your Jest configs and mocks.
 
+### Multiple Environments and Schemes (.env)
+
+This boilerplate contains three build targets: `RNBoilerplate`, `RNBoilerplateDev`, and `RNBoilerplateStage`.
+Steps to make .env work correctly:
+
+- Create four files: `.env`, `.env.staging`, `.env.production`, `.env.development`.
+- Leave .env empty and put other env variables according to their build types.
+- When changing schemes in iOS, clean build folder, and run `sudo yarn deleteDerivedData`.
+- For Android, run appropriate scripts from `package.json`.
+
 ### Firebase
 
-This project has different product flavors and schemes. So, remember to add your own firebase config files.
-If you're not using Firebase, simply uninstall the packages, and remove any firebase related configs.
+Remember to add your own firebase config files
+
+- For Android: Replace the `google-services.json` in respective folders from `android/app/src`
+- For iOS, Replace the `GoogleService-Info` from the respective groups.
 
 #### Android
 

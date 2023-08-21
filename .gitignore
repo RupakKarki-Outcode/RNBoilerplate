@@ -85,7 +85,7 @@ web-build/
 # Configurations
 !env.js
 
-
+.env
 .env.staging
 .env.development
 .env.production
